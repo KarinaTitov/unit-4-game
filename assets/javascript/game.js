@@ -35,7 +35,7 @@ $(document).ready(function () {
 
     $("#winsNumber").text(wins);
     $("#lossesNumber").text(losses);
-    $("#alert").text("");
+    $("#alert").html("<br/>");
     $("#score").text(userTotal);
     $("#randomNumber").text(random);
 
@@ -44,10 +44,14 @@ $(document).ready(function () {
         random = Math.floor(Math.random() * 102 + 19);
         $("#randomNumber").text(random);
 
-        let crystal1 = Math.floor(Math.random() * 12 + 1);
-        let crystal2 = Math.floor(Math.random() * 12 + 1);
-        let crystal3 = Math.floor(Math.random() * 12 + 1);
-        let crystal4 = Math.floor(Math.random() * 12 + 1);
+        crystal1 = Math.floor(Math.random() * 12 + 1);
+        crystal2 = Math.floor(Math.random() * 12 + 1);
+        crystal3 = Math.floor(Math.random() * 12 + 1);
+        crystal4 = Math.floor(Math.random() * 12 + 1);
+
+        userTotal = 0;
+        $("#score").text(userTotal);
+
     }
 
    //adds wins to the userTotal
